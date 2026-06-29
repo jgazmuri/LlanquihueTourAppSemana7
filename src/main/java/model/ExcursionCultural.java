@@ -2,19 +2,21 @@ package model;
 
 public class ExcursionCultural extends ServicioTuristico {
 
-    private int lugarHistorico;
+    private String lugarHistorico;
 
-    public int getLugarHistorico() {
+    public String getLugarHistorico() {
         return lugarHistorico;
     }
 
-    public void setLugarHistorico(int lugarHistorico) {
+    public void setLugarHistorico(String lugarHistorico) {
         this.lugarHistorico = lugarHistorico;
     }
 
-    public ExcursionCultural(String nombre, String duracionHoras, int lugarHistorico) {
+    public ExcursionCultural(String nombre, String duracionHoras, String lugarHistorico) {
         super(nombre, duracionHoras);
         this.lugarHistorico = lugarHistorico;
+
+
 
     }
 
