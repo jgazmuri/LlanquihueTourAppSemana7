@@ -19,10 +19,9 @@ public class PaseoLacustre extends ServicioTuristico {
     }
 
     @Override
-    public void mostrarInformacion() {
-
-        System.out.printf("\n---Paseo Lacustre---\n");
-        super.mostrarInformacion();
+    public void mostrarResumen(){
+        System.out.println("\n---Paseo Lacustre---\n");
+        System.out.println("El nombre del servicio es: " + nombre);
         System.out.println("El tipo de Embarcacion es: " + tipoEmbarcacion);
     }
 
@@ -30,4 +29,12 @@ public class PaseoLacustre extends ServicioTuristico {
         System.out.println(nombre +" "+ duracionHoras + "Adjunto servicio");
     }
 
+    @Override
+    public String toString() {
+        return "PaseoLacustre{" +
+                "tipoEmbarcacion='" + tipoEmbarcacion + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", duracionHoras='" + duracionHoras + '\'' +
+                '}';
+    }
 }

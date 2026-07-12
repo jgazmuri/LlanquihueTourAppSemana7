@@ -1,35 +1,44 @@
 package model;
 
-public class ServicioTuristico {
+public class ServicioTuristico implements Registrable{
 
-    protected String nombre;
-    protected String duracionHoras;
+protected String nombre;
+protected String duracionHoras;
 
-    public String getNombre() {
-        return nombre;
+public String getNombre() {
+    return nombre;
+}
+
+public void setNombre(String nombre) {
+    this.nombre = nombre;
+}
+
+public String getDuracionHoras() {
+    return duracionHoras;
+}
+
+public void setDuracionHoras(String duracionHoras) {
+    this.duracionHoras = duracionHoras;
+}
+
+public ServicioTuristico(String nombre, String duracionHoras) {
+    this.nombre = nombre;
+    this.duracionHoras = duracionHoras;
+
+}
+
+public void mostrarResumen() {
+    System.out.println("\n---Servicios Turisticos---\n");
+    System.out.println("Nombre: " + nombre);
+    System.out.println("Duracion horas: " + duracionHoras);
+
+}
+
+    @Override
+    public String toString() {
+        return "ServicioTuristico{" +
+                "nombre='" + nombre + '\'' +
+                ", duracionHoras='" + duracionHoras + '\'' +
+                '}';
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getDuracionHoras() {
-        return duracionHoras;
-    }
-
-    public void setDuracionHoras(String duracionHoras) {
-        this.duracionHoras = duracionHoras;
-    }
-
-    public ServicioTuristico(String nombre, String duracionHoras) {
-        this.nombre = nombre;
-        this.duracionHoras = duracionHoras;
-
-    }
-
-    public void mostrarInformacion() {
-        System.out.println("Nombre: " + getNombre());
-        System.out.println("DuracionHoras: " + getDuracionHoras());
-    }
-
 }

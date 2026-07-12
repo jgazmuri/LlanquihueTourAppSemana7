@@ -18,17 +18,23 @@ public class ExcursionCultural extends ServicioTuristico {
 
 
     }
-
     @Override
-    public void mostrarInformacion() {
-        System.out.printf("\n---Excurciones Culturales---\n");
-        super.mostrarInformacion();
-        System.out.println("Lugar a Visitar: " + lugarHistorico);
-        ;
-    }
+    public void mostrarResumen(){
+        System.out.println("\n---Excursion Cultural---\n");
+        System.out.println("El nombre del servicio es: " + nombre);
+        System.out.println("Paseo en lugar historico: " + lugarHistorico);
+        }
 
     public void Lugares(){
-        System.out.println(getNombre() +" "+ getDuracionHoras() + "Esto dura este Servicio");
+        System.out.println(getNombre() +" "+ getDuracionHoras() + "Esto dura el Servicio");
     }
 
+    @Override
+    public String toString() {
+        return "ExcursionCultural{" +
+                "lugarHistorico='" + lugarHistorico + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", duracionHoras='" + duracionHoras + '\'' +
+                '}';
+    }
 }
